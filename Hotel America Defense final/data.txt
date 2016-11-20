@@ -1,0 +1,92 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Mar 17, 2010 at 05:39 AM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `register`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reservation`
+--
+
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `room` varchar(50) NOT NULL,
+  `person` int(50) NOT NULL,
+  `checkin` varchar(50) NOT NULL,
+  `checkout` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+
+--
+-- Dumping data for table `reservation`
+--
+
+INSERT INTO `reservation` (`id`, `room`, `person`, `checkin`, `checkout`) VALUES
+(1, 'De luxe single double bed', 0, '', ''),
+(2, 'De luxe single double bed', 0, '', ''),
+(3, 'De luxe single double bed', 0, '', ''),
+(4, 'De luxe single double bed', 0, '', ''),
+(5, 'De luxe double bed', 2, '', ''),
+(6, 'De luxe double bed', 2, '', ''),
+(7, 'preidential', 2, '', ''),
+(8, 'preidential', 2, '03/12/2010', ''),
+(9, 'De luxe single double bed', 2, '03/13/2010', ''),
+(10, 'De luxe single double bed', 2, '03/13/2010', ''),
+(11, 'De luxe single double bed', 2, '03/13/2010', ''),
+(12, 'De luxe single double bed', 2, '03/13/2010', ''),
+(13, 'preidential', 1, '03/05/2010', '03/20/2010'),
+(14, 'preidential', 1, '03/05/2010', '03/20/2010'),
+(15, 'preidential', 1, '03/05/2010', '03/20/2010'),
+(16, 'preidential', 1, '03/05/2010', '03/20/2010'),
+(17, 'preidential', 1, '03/05/2010', '03/20/2010'),
+(18, 'preidential', 1, '03/05/2010', '03/20/2010'),
+(19, 'De luxe single double bed', 2, '03/04/2011', '03/25/2011'),
+(20, 'De luxe double bed', 0, '03/01/2010', '03/02/2010'),
+(21, 'De luxe single double bed', 0, '03/01/2010', '03/02/2010'),
+(22, 'De luxe single double bed', 0, '03/11/2010', '03/17/2010');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(40) NOT NULL,
+  `lastname` varchar(40) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `user_password` varchar(40) NOT NULL,
+  `user_repassword` varchar(40) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=77 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `gender`, `email`, `username`, `user_password`, `user_repassword`, `status`) VALUES
+(71, 'asd', 'asd', '', 'asdasd@yahoo.com', 'asd', 'asd', 'asd', 'IN'),
+(70, 'asd', 'asd', '', 'asdasd@yahoo.com', 'asd', 'asd', 'asd', 'IN'),
+(69, 'asd', 'asd', '', 'asdasd@yahoo.com', 'asd', 'asdasdasd', 'asdasdasd', 'OUT'),
+(68, 'qwe', 'qwe', '', 'qwe@yahoo.com', 'qwe', 'qwe', 'qwe', 'OUT'),
+(67, 'qwe', 'qwe', '', 'qwe@yahoo.com', 'qe', 'qwe', 'qwe', 'OUT'),
+(72, 'asd', 'asd', 'male', 'asdasd@yahoo.com', 'asd', 'asd', 'asd', 'IN'),
+(73, 'hjk', 'hjk', 'female', 'hjk@yahoo.com', 'hjk', 'hjk', 'hjk', 'OUT'),
+(74, 'shiela', 'pasamonte', 'female', 's_pasamonte@yahoo.com', 'she', 'she', 'she', 'OUT'),
+(75, 'ghjgh', 'j', 'male', 'ghj@yahoo.com', 'ghj', 'ghj', 'ghj', 'OUT'),
+(76, 'asd', 'asd', 'male', 'asd@yahoo.com', 'asd', 'asd', 'asd', 'IN');
